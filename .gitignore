@@ -1,0 +1,6 @@
+lab*.java
+*.class
+*.zip
+*.bin
+*.7z
+target/**

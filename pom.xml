@@ -21,4 +21,13 @@
         <test.dir>test/</test.dir>
         <resource.dir>resources/</resource.dir>
     </properties>
+    <build>
+        <testSourceDirectory>${test.dir}</testSourceDirectory>
+        <sourceDirectory>${src.dir}</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>${resource.dir}</directory>
+            </resource>
+        </resources>
+    </build>
 </project>

@@ -7,7 +7,10 @@ package test;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.PrintStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -51,6 +54,11 @@ public abstract class HomeworkTestBase {
     public static void simulateIn(final String str) {
         // Simulated STDIN
         final ByteArrayInputStream in = new ByteArrayInputStream(str.getBytes());
+        try {
+            in.close();
+        } catch (IOException ex) {
+            // nope
+        }
         System.setIn(in);
     }
     @Before

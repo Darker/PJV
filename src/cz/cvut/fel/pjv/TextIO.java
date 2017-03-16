@@ -48,7 +48,7 @@ public class TextIO {
    public TextIO() {
       stdin = new Scanner(System.in);
    }
-   Scanner stdin;
+   protected final Scanner stdin;
 } 
 
 /* end of TextIO.java */
